@@ -1,0 +1,52 @@
+/*
+ * This file holds identifiers for elements used in the header, body, and footer of
+ * the Cars4Everyone website.
+ */
+
+/*
+ * Styling for the top
+ */
+#PageHeader {
+
+}
+
+/*
+ * Styling for the webpage logo
+ */
+#TopLogo {
+  color: black;
+  text-align: center;
+  font-size: 48;
+  font-style: bold;
+}
+
+/*
+ * Styling for the container for the body of the page
+ */
+#PageBodyContainer {
+
+}
+
+/*
+ * Styling for headers in the body panels
+ */
+.PanelHeaders {
+  display: inline-block;
+}
+
+/*
+ * Styling for the bottom
+ * TO DO: Convert from "Sticky Footer" which is always at the bottom of the
+ *        screen, to the bottom of a dynamic page.
+ */
+#PageFooter {
+  position:fixed;
+  bottom:0;
+}
+
+/*
+ * Styling for text contained in the footer
+ */
+#FooterText {
+  text-align: center;
+}

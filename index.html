@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Cars4Everyone</title>
+
+    <style>
+      /* Internal Style */
+    </style>
+
+    <!-- External Styling Sheets -->
+    <!--<link href="./css/Cars4Everyone_Styles.css" type="text/css" rel="stylesheet"/>-->
+    <link href="./css/GeneralLayout.css" type="text/css" rel="stylesheet"/>
+    <link href="./css/SearchPanel.css" type="text/css" rel="stylesheet"/>
+    <link href="./css/ResultsPanelHeader.css" type="text/css" rel="stylesheet"/>
+
+  </head>
+
+  <body>
+    <!-- Top Area -->
+    <div id = "PageHeader">
+      <!-- Possibly replace with a logo image -->
+      <div id = "TopLogo">Cars4Everyone</div>
+    </div>
+    <hr/>
+    <!-- Body Portion of Website -->
+    <div id = "PageBodyContainer">
+      <!-- Includes Search Panel and Filters for Customers to Tailor Their Results -->
+      <div id = "BodySearchPanel">
+        <!-- Container Header, Possible allow users to hover for instructions (?) -->
+        <div class="BodyPanelHeader" id = "SearchPanelHeader">(Search Options)</div>
+        <!-- Portions with Buttons to Signal the User Wants the Query Changed -->
+        <div id = "BodyPanelButtons">
+          <!-- TO DO: Positioning of this line -->
+          <!-- TO DO: Trigger Event -> Add Selected Parameters to Query and
+               Send it to the Database to Receive Results-->
+          <button id = "SearchButton" class = "PanelHeader">Search</button>
+          <!-- TO DO: Trigger Event -> Remove Parameters and
+               Request All Cars from the Database-->
+          <button id = "ResetButton" class = "PanelHeader">Reset</button>
+        </div>
+        <!-- Collapsing Filters for Results -->
+        <div id = "FilterContainer">
+          <!--TO DO: Dropdown Search Filters -->
+          <!--Temp Values for formatting purposes -->
+          <button class="accordion" id = "MakeFilter">Make</button>
+          <!--TO DO: Populate via Script -->
+          <div class="panel" id="MakeFilterOptions">
+            <ul>
+              <li>Make #1</li>
+              <li>Make #2</li>
+              <li>Make #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "ModelFilter">Model</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="ModelFilterOptions">
+            <ul>
+              <li>Model #1</li>
+              <li>Model #2</li>
+              <li>Model #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "YearFilter">Year</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="YearFilterOptions">
+            <ul>
+              <li>Year #1</li>
+              <li>Year #2</li>
+              <li>Year #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "PriceFilter">Price</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="PriceFilterOptions">
+            <ul>
+              <li>Price #1</li>
+              <li>Price #2</li>
+              <li>Price #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "CityMPGFilter">City MPG</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="CityMPGFilterOptions">
+            <ul>
+              <li>CityMPG #1</li>
+              <li>CityMPG #2</li>
+              <li>CityMPG #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "HighwayMPGFilter">Highway MPG</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="HighwayMPGFilterOptions">
+            <ul>
+              <li>HighwayMPG #1</li>
+              <li>HighwayMPG #2</li>
+              <li>HighwayMPG #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "AccelerationFilter">Acceleration</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="AccelerationFilterOptions">
+            <ul>
+              <li>Acceleration #1</li>
+              <li>Acceleration #2</li>
+              <li>Acceleration #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "DrivetrainFilter">Drivetrain</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="DrivetrainFilterOptions">
+            <ul>
+              <li>Drivetrain #1</li>
+              <li>Drivetrain #2</li>
+              <li>Drivetrain #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "OccupancyFilter">Occupancy</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="OccupancyFilterOptions">
+            <ul>
+              <li>Occupancy #1</li>
+              <li>Occupancy #2</li>
+              <li>Occupancy #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "CylinderFilter">Cylinder</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="CylinderFilterOptions">
+            <ul>
+              <li>Cylinder #1</li>
+              <li>Cylinder #2</li>
+              <li>Cylinder #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "BodyStyleFilter">Body Style</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="BodyStyleFilterOptions">
+            <ul>
+              <li>BodyStyle #1</li>
+              <li>BodyStyle #2</li>
+              <li>BodyStyle #3</li>
+            </ul>
+          </div>
+          <button class="accordion" id = "HorsepowerFilter">Horsepower</button>
+          <!-- TO DO: Populate via Script -->
+          <div class="panel" id="HorsePowerFilterOptions">
+            <ul>
+              <li>HorsePower #1</li>
+              <li>HorsePower #2</li>
+              <li>HorsePower #3</li>
+            </ul>
+          </div>
+          </div>
+      </div>
+      <div class="in-line" id = "BodyResultsPanel">
+        <div class = "BodyPanelHeader" id="ResultsPanelHeader">(Search Results)</div>
+        <!-- TO DO Positioning of this line in the HTML view -->
+        <div class = "PanelHeader" id = "ResultsHeader">
+          <!-- Populate with results meeting criteria -->
+          <div class="PanelHeaders" id="NumberOfCarResults">####</div>
+          <div class="PanelHeaders">cars meet your requirements</div>
+          <div class="PanelHeaders">Cars per page</div>
+          <!--Dropdown for cars per page -->
+          <div class="PanelHeaders">
+            <div class="dropdown">
+              <button onclick="ResultsPerPageDropdown()" class="dropbtn">5</button>
+              <div id="ResultsPerPageDropdown" class="dropdown-content">
+                <a href="#">10</a>
+                <a href="#">15</a>
+                <a href="#">20</a>
+              </div>
+            </div>
+          </div>
+          <div class="PanelHeaders">Sort By</div>
+          <!--Dropdown for sort by -->
+          <div class="PanelHeaders">
+            <div class="dropdown">
+              <button onclick="SortByDropdown()" class="dropbtn">SortBy</button>
+              <div id="SortByDropdown" class="dropdown-content">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <!-- Populate using PHP or Javascript -->
+        <div class = "CarResultContainer">
+          <div>No Car Results Found</div>
+        </div>
+      </div>
+    </div>
+    <!-- TO DO: Fix CSS (Note in Banner_Styles.css)-->
+    <div id = "PageFooter">
+      <hr/>
+      <div id = "FooterText">This website is being used for educational purposes and is not authentic.</div>
+    </div>
+  </body>
+
+  <!-- External javascripts -->
+  <script src="./javascript/accordion.js"></script>
+  <script src="./javascript/dropdowns.js"></script>
+
+  <script>
+    /* Internal Javascripts */
+  </script>
