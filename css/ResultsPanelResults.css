@@ -1,0 +1,9 @@
+.car_result {
+  border-style: solid;
+  border-width: thin;
+  background: grey;
+}
+
+.searchOption > div {
+  display:inline-block;
+}
