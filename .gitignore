@@ -1,9 +1,5 @@
 
-<?php
-$servername = "cars4everyone.ccqveog3ruej.us-east-1.rds.amazonaws.com"; //insert servername
-$username = "root"; //insert username
-$password = "Cars5Everyone!"; //insert password
-?>
+YOLO
 
 php/database.php
 php/database.php
