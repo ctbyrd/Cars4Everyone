@@ -51,7 +51,7 @@
                 WHERE variable1 in (options1) &&
                       variable2 in (options2)"
              -->
-          <button id = "SearchButton" class = "PanelHeader">Search</button>
+          <input type= 'submit' value="submit" id = "SearchButton" class = "PanelHeader" >Search</input>
           <!-- TO DO: Trigger Event -> Remove Parameters and
                Request All Cars from the Database
                New SQL: "SELECT * FROM cars;"
@@ -63,7 +63,7 @@
           <!-- TO DO: Get values that are selected-->
           <button class="accordion" id = "MakeFilter">Make</button>
           <!-- Populates results using php -->
-          <form class="panel" id="MakeFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="MakeFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("make", $curr_query);
@@ -72,7 +72,7 @@
           </form>
           <button class="accordion" id = "ModelFilter">Model</button>
           <!-- Populates results using php -->
-          <form class="panel" id="ModelFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="ModelFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("model", $curr_query);
@@ -81,7 +81,7 @@
           </form>
           <button class="accordion" id = "YearFilter">Year</button>
           <!-- Populates results using php -->
-          <form class="panel" id="YearFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="YearFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("year", $curr_query);
@@ -90,7 +90,7 @@
           </form>
           <button class="accordion" id = "PriceFilter">Price</button>
           <!-- Populates results using php -->
-          <form class="panel" id="PriceFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="PriceFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("price", $curr_query);
@@ -99,7 +99,7 @@
           </form>
           <button class="accordion" id = "CityMPGFilter">City MPG</button>
           <!-- Populates results using php -->
-          <form class="panel" id="CityMPGFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="CityMPGFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("MPG_city", $curr_query);
@@ -108,7 +108,7 @@
           </form>
           <button class="accordion" id = "HighwayMPGFilter">Highway MPG</button>
           <!-- Populates results using php -->
-          <form class="panel" id="HighwayMPGFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="HighwayMPGFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("MPG_highway", $curr_query);
@@ -117,7 +117,7 @@
           </form>
           <button class="accordion" id = "AccelerationFilter">Acceleration</button>
           <!-- Populates results using php -->
-          <form class="panel" id="AccelerationFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="AccelerationFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("60_time", $curr_query);
@@ -126,7 +126,7 @@
           </form>
           <button class="accordion" id = "DrivetrainFilter">Drivetrain</button>
           <!-- Populates results using php -->
-          <form class="panel" id="DrivetrainFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="DrivetrainFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("DriveTrain_id", $curr_query);
@@ -135,7 +135,7 @@
           </form>
           <button class="accordion" id = "OccupancyFilter">Occupancy</button>
           <!-- Populates results using php -->
-          <form class="panel" id="OccupancyFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="OccupancyFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("occupant_id", $curr_query);
@@ -144,7 +144,7 @@
           </form>
           <button class="accordion" id = "CylinderFilter">Cylinder</button>
           <!-- Populates results using php -->
-          <form class="panel" id="CylinderFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="CylinderFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("cylinder_id", $curr_query);
@@ -153,7 +153,7 @@
           </form>
           <button class="accordion" id = "BodyStyleFilter">Body Style</button>
           <!-- Populates results using php -->
-          <form class="panel" id="BodyStyleFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="BodyStyleFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("BodyModel_id", $curr_query);
@@ -162,7 +162,7 @@
           </form>
           <button class="accordion" id = "HorsepowerFilter">Horsepower</button>
           <!-- Populates results using php -->
-          <form class="panel" id="HorsePowerFilterOptions">
+          <form method="post" action="index.php" onsubmit="onsubmit()" class="panel" id="HorsePowerFilterOptions">
             <ul>
               <?php
                 PopulateSearchPanel("Horsepower_id", $curr_query);
