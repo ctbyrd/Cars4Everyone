@@ -69,7 +69,7 @@
                 PopulateSearchPanel("make", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "ModelFilter">Model</button>
           <!-- Populates results using php -->
           <form class="panel" id="ModelFilterOptions">
@@ -78,7 +78,7 @@
                 PopulateSearchPanel("model", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "YearFilter">Year</button>
           <!-- Populates results using php -->
           <form class="panel" id="YearFilterOptions">
@@ -87,7 +87,7 @@
                 PopulateSearchPanel("year", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "PriceFilter">Price</button>
           <!-- Populates results using php -->
           <form class="panel" id="PriceFilterOptions">
@@ -96,7 +96,7 @@
                 PopulateSearchPanel("price", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "CityMPGFilter">City MPG</button>
           <!-- Populates results using php -->
           <form class="panel" id="CityMPGFilterOptions">
@@ -105,7 +105,7 @@
                 PopulateSearchPanel("MPG_city", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "HighwayMPGFilter">Highway MPG</button>
           <!-- Populates results using php -->
           <form class="panel" id="HighwayMPGFilterOptions">
@@ -114,7 +114,7 @@
                 PopulateSearchPanel("MPG_highway", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "AccelerationFilter">Acceleration</button>
           <!-- Populates results using php -->
           <form class="panel" id="AccelerationFilterOptions">
@@ -123,7 +123,7 @@
                 PopulateSearchPanel("60_time", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "DrivetrainFilter">Drivetrain</button>
           <!-- Populates results using php -->
           <form class="panel" id="DrivetrainFilterOptions">
@@ -132,7 +132,7 @@
                 PopulateSearchPanel("DriveTrain_id", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "OccupancyFilter">Occupancy</button>
           <!-- Populates results using php -->
           <form class="panel" id="OccupancyFilterOptions">
@@ -141,7 +141,7 @@
                 PopulateSearchPanel("occupant_id", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "CylinderFilter">Cylinder</button>
           <!-- Populates results using php -->
           <form class="panel" id="CylinderFilterOptions">
@@ -150,7 +150,7 @@
                 PopulateSearchPanel("cylinder_id", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "BodyStyleFilter">Body Style</button>
           <!-- Populates results using php -->
           <form class="panel" id="BodyStyleFilterOptions">
@@ -159,7 +159,7 @@
                 PopulateSearchPanel("BodyModel_id", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
           <button class="accordion" id = "HorsepowerFilter">Horsepower</button>
           <!-- Populates results using php -->
           <form class="panel" id="HorsePowerFilterOptions">
@@ -168,7 +168,7 @@
                 PopulateSearchPanel("Horsepower_id", $curr_query);
               ?>
             </ul>
-          </div>
+          </form>
         </div>
       </div>
       <div class="in-line" id = "BodyResultsPanel">
