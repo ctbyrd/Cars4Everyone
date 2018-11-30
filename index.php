@@ -16,43 +16,10 @@
 
   </head>
 
-  <script>
-  // var valueschecked = {};
-  //   function hasBeenCheck(checkboxElement) {
-  //     if (checkboxElement.checked) {
-  //       if (checkboxElement.name in valueschecked) {
-  //         valueschecked[checkboxElement.name].push(checkboxElement.value);
-  //       } else {
-  //         valueschecked[checkboxElement.name] = [checkboxElement.value];
-  //       }
-  //       // value = valueschecked[checkboxElement.name];
-  //       // alert ("Value " + checkboxElement.value +
-  //       //        "\nClass " + checkboxElement.name + "is checked.\n");
-  //       console.log(checkboxElement.value + " has been added.\n" + valueschecked);
-  //     }
-  //     else {
-  //       if (valueschecked[checkboxElement.name].length == 1){
-  //          delete valueschecked[checkboxElement.name];
-  //       }
-  //       else{
-  //         console.log("Array Before: " + valueschecked[checkboxElement.name] + "\n");
-  //         for(var i = 0; i < valueschecked[checkboxElement.name].length; i++){
-  //           console.log(i + ": " + valueschecked[checkboxElement.name][i] +"\n");
-  //           console.log()
-  //           if (valueschecked[checkboxElement.name][i] === checkboxElement.value) {
-  //             console.log("Removing NOW: " + valueschecked[checkboxElement.name][i] + "\n")
-  //             valueschecked[checkboxElement.name].splice(i, 1);
-  //           }
-  //         }
-  //         //alert (checkboxElement + "is unchecked.");
-  //       }
-  //       console.log(checkboxElement.value + " has been remove.\n" + valueschecked[checkboxElement.name]);
-  //   }
-  // };
-  </script>
+  <!-- External Javascript -->
+  <script src="./javascript/dropdowns.js"></script>
 
   <body>
-    <iframe name="cframe" ></iframe>
     <!-- Files with php Functions -->
     <!-- TO DO:
          Consolidate into one file (?)
@@ -228,13 +195,14 @@
               <!-- TO DO: Change Value of LIMIT for results in CarsResultContainer
                   SQL Query: "LIMIT <value>"
                 -->
-              <button onclick="ResultsPerPageDropdown()" class="dropbtn">5</button>
-              <div id="ResultsPerPageDropdown" class="dropdown-content">
-                <a value="5">5</a>
-                <a value="10">10</a>
-                <a value="15">15</a>
-                <a value="20">20</a>
-              </div>
+              <!-- <button onclick="ResultsPerPageDropdown()" class="dropbtn">5</button> -->
+              <select id="ResultsPerPageDropdown" onchange="OrderByDropdownChange(this)">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option selected value="99">All</option>
+              </select>
             </div>
           </div>
           <div class="PanelHeaders">Sort By</div>
@@ -244,21 +212,21 @@
               <!-- TO DO:  Change value of ORDER BY for results in CarsResultContainer
                    SQL Query: "ORDER BY SortByDropdownValue"
                 -->
-              <button onclick="SortByDropdown()" class="dropbtn" value="make">Make</button>
-              <div id="SortByDropdown" class="dropdown-content">
-                <a value="make">Make</a>
-                <a value="model">Model</a>
-                <a value="year">Year</a>
-                <a value="price">Price</a>
-                <a value="MPG_city">City MPG</a>
-                <a value="MPG_highway">Highway MPG</a>
-                <a value="60_time">Acceleration</a>
-                <a value="DriveTrain_id">Drivetrain</a>
-                <a value="cylinder_id">Cylinder</a>
-                <a value="occupant_id">Occupancy</a>
-                <a value="BodyModel_id">Body Model</a>
-                <a value="Horsepower_id">Horsepower</a>
-              </div>
+              <!-- <button onclick="SortByDropdown()" class="dropbtn" value="make">Make</button> -->
+              <select id="SortByDropdown" onchange="SortByDropdownChange(this)">
+                <option selected value="make">Make</option>
+                <option value="model">Model</option>
+                <option value="year">Year</option>
+                <option value="price">Price</option>
+                <option value="MPG_city">City MPG</option>
+                <option value="MPG_highway">Highway MPG</option>
+                <option value="60_time">Acceleration</option>
+                <option value="DriveTrain_id">Drivetrain</option>
+                <option value="cylinder_id">Cylinder</option>
+                <option value="occupant_id">Occupancy</option>
+                <option value="BodyModel_id">Body Model</option>
+                <option value="Horsepower_id">Horsepower</option>
+              </select>
             </div>
           </div>
         </div>
@@ -285,7 +253,6 @@
 
   <!-- External javascripts -->
   <script src="./javascript/accordion.js"></script>
-  <script src="./javascript/dropdowns.js"></script>
   <script src="./javascript/checkbox.js"></script>
 
   <script>
