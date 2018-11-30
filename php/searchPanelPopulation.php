@@ -23,8 +23,8 @@
       // output data of each row
       $index=0;
       while($row = $result->fetch_assoc()) {
-        echo "<input class=\"searchOption\" type=\"checkbox\" name=\"check_list[]\" value=\"".$row[$variable]."\">
-              <label>".$row[$variable]." (".$row[$count_column_header].")</label><br/>";
+        echo "<input type=\"checkbox\" onchange=\"hasBeenCheck(this)\" \"class=\"searchOption\" name=\"".$variable."\" value=\"".$row[$variable]."\"><label>".$row[$variable]." (".$row[$count_column_header].")</label><br/>
+        ";
         // echo "<input class=\"searchOption\">";
         // echo "<div id=\"".$variable.$index."\">".$row[$variable]." </div>";
         // echo "<div id=\"".$variable.$index."_count\"> (".$row[$count_column_header].") </div>";
