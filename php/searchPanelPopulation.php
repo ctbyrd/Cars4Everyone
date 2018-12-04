@@ -9,7 +9,7 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_errno) {
-      die('ERROR NO DATABSE');
+      die('ERROR NO DATABASE');
     }
 
     // echo "Printing ".$variable." values <br/>";
