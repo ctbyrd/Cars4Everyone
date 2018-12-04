@@ -14,6 +14,29 @@
 
   </head>
 
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $("#SearchButton").click( function(e){
+        e.preventDefault();
+        $.post("php/resultsPanelPopulation.php", $("#submitButtonForm").serialize(), function (data){
+          // id="results_panel"
+          $("#results_panel").html(data);
+        });
+    }).click();
+  });
+  // <!-- https://api.jquery.com/jquery.post/ -->
+  // <!-- $.post( "test.php", $( "#testform" ).serialize() ); -->
+  // <!-- $.post( "test.php", function( data ) {
+  // alert( "Data Loaded: " + data );
+
+  </script>
+
   <body>
     <!-- Files with php Functions -->
     <?php
@@ -49,49 +72,49 @@
           <!-- TO DO: Get values that are selected-->
           <button type="button" class="accordion" id = "MakeFilter">Make</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("make", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "YearFilter">Year</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("year", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "PriceFilter">Price</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("price", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "CityMPGFilter">City MPG</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("MPG_city", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "HighwayMPGFilter">Highway MPG</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("MPG_highway", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "AccelerationFilter">Acceleration</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("60_time", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "DrivetrainFilter">Drivetrain</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("DriveTrain_id", $curr_query);
             ?>
@@ -99,21 +122,21 @@
           <!-- </form> -->
           <button type="button" class="accordion" id = "OccupancyFilter">Occupancy</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("occupant_id", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "CylinderFilter">Cylinder</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("cylinder_id", $curr_query);
             ?>
           </ul>
           <button type="button" class="accordion" id = "BodyStyleFilter">Body Style</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("BodyModel_id", $curr_query);
             ?>
@@ -121,7 +144,7 @@
           <!-- </form> -->
           <button type="button" class="accordion" id = "HorsepowerFilter">Horsepower</button>
           <!-- Populates results using php -->
-          <ul>
+          <ul style="display: none;">
             <?php
               echo PopulateSearchPanel("Horsepower_id", $curr_query);
             ?>
@@ -145,7 +168,7 @@
           <!--Dropdown for cars per page -->
           <div class="PanelHeaders">
             <div class="dropdown">
-              <select name="ResultsPerPageDropdown" id="ResultsPerPageDropdown" onchange="ResultsPerPageDropdownChange(this)">
+              <select name="ResultsPerPageDropdown" id="ResultsPerPageDropdown"> <!--onchange="ResultsPerPageDropdownChange(this)"-->
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -158,7 +181,7 @@
           <!--Dropdown for sort by -->
           <div class="PanelHeaders">
             <div class="dropdown">
-              <select name="SortByDropdown" id="SortByDropdown" onchange="SortByDropdownChange(this)">
+              <select name="SortByDropdown" id="SortByDropdown"> <!--onchange="SortByDropdownChange(this)"-->
                 <option selected value="make">Make</option>
                 <option value="model">Model</option>
                 <option value="year">Year</option>
@@ -179,7 +202,8 @@
       <hr/>
       <!-- Populate using PHP -->
       <div class = "CarResultContainer">
-        <iframe name="results_panel" src='php/resultsPanelPopulation.php'></iframe>
+        <div id="results_panel"></div>
+        <!-- <iframe name="results_panel" src='php/resultsPanelPopulation.php'></iframe> -->
       </div>
     </div>
     </div>

@@ -23,8 +23,9 @@
       // output data of each row
       $index=0;
       while($row = $result->fetch_assoc()) {
-        $output = $output."<input checked type=\"checkbox\" onchange=\"hasBeenCheck(this)\" \"class=\"searchOption\" name=\"".$variable."[]\" value=\"".$row[$variable]."\"><label>".$row[$variable]." (".$row[$count_column_header].")</label><br/>
+        $output = $output."<input checked type=\"checkbox\" \"class=\"searchOption\" name=\"".$variable."[]\" value=\"".$row[$variable]."\"><label>".$row[$variable]." (".$row[$count_column_header].")</label><br/>
         ";
+        //onchange=\"hasBeenCheck(this)\"
         // echo "<input class=\"searchOption\">";
         // echo "<div id=\"".$variable.$index."\">".$row[$variable]." </div>";
         // echo "<div id=\"".$variable.$index."_count\"> (".$row[$count_column_header].") </div>";
