@@ -52,11 +52,6 @@
           <!-- TO DO: Positioning of this line -->
           <form name="form" id="submitButtonForm" method="POST" action="php/resultsPanelPopulation.php" target="results_panel">
             <input type= 'submit' value="Search" id = "SearchButton" class = "PanelHeader"></input>
-            <!-- TO DO: Trigger Event -> Remove Parameters and
-                Request All Cars from the Database
-                New SQL: "SELECT * FROM cars;"
-              -->
-            <!-- <button type= 'submit' id = "ResetButton" class = "PanelHeader">Reset</button> -->
         </div>
         <!-- Collapsing Filters for Results -->
         <div id = "FilterContainer">
@@ -154,7 +149,6 @@
               //resultsPanelCount($curr_query);
             ?>
           </div>
-          <div class="PanelHeaders">cars meet your requirements</div>
           <div class="PanelHeaders">Cars per page</div>
           <!--Dropdown for cars per page -->
           <div class="PanelHeaders">
@@ -194,7 +188,6 @@
       <!-- Populate using PHP -->
       <div class = "CarResultContainer">
         <div id="results_panel"></div>
-        <!-- <iframe name="results_panel" src='php/resultsPanelPopulation.php'></iframe> -->
       </div>
     </div>
     </div>
