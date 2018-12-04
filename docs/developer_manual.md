@@ -1,3 +1,7 @@
+# Cars4Everyone
+## INST377 Fall 2018
+## University of Maryland, College Park
+
 The structure of the web application was built locally on our teams local machines. We developed and tested our code locally on the AMPPS server, which runs our PHP server and mySQL server. We then cloned the git hub repo to the AWS instance to be able to run our code on the server. The AWS instance is running the web application through a downloaded sql database and a main index.php file, which is read first by the Directory Index.
 
 Software/libraries:
