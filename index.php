@@ -4,6 +4,9 @@
     <title>Cars4Everyone</title>
 
     <style>
+    table,th,td{
+      border: 1px solid black;
+    }
       /* Internal Style */
     </style>
 
