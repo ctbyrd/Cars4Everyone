@@ -14,11 +14,7 @@
 
   </head>
 
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script>
   $(document).ready(function () {
@@ -30,11 +26,6 @@
         });
     }).click();
   });
-  // <!-- https://api.jquery.com/jquery.post/ -->
-  // <!-- $.post( "test.php", $( "#testform" ).serialize() ); -->
-  // <!-- $.post( "test.php", function( data ) {
-  // alert( "Data Loaded: " + data );
-
   </script>
 
   <body>
@@ -65,7 +56,7 @@
                 Request All Cars from the Database
                 New SQL: "SELECT * FROM cars;"
               -->
-            <button id = "ResetButton" class = "PanelHeader">Reset</button>
+            <button type= 'submit' id = "ResetButton" class = "PanelHeader">Reset</button>
         </div>
         <!-- Collapsing Filters for Results -->
         <div id = "FilterContainer">
