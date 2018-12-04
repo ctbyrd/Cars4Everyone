@@ -56,7 +56,7 @@
                 Request All Cars from the Database
                 New SQL: "SELECT * FROM cars;"
               -->
-            <button type= 'submit' id = "ResetButton" class = "PanelHeader">Reset</button>
+            <!-- <button type= 'submit' id = "ResetButton" class = "PanelHeader">Reset</button> -->
         </div>
         <!-- Collapsing Filters for Results -->
         <div id = "FilterContainer">
